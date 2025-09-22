@@ -18,7 +18,7 @@ stages:
         environment:
           name: 'miVM-DevOps'  # Nombre del entorno configurado en Azure DevOps
           resourceType: VirtualMachine  # Especifica que se conecta a una máquina virtual
-          resourceName:'miVM-DevOps'
+          resourceName: 'miVM-DevOps'
         strategy:
           runOnce:
             deploy:
@@ -88,6 +88,7 @@ stages:
                     echo "La URL para acceder a Nginx es: http://${VM_IP_PUBLICA}/"
 
                   displayName: 'Mostrar URL de la máquina virtual'
+
 
 
 
