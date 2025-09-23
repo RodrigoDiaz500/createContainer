@@ -21,7 +21,9 @@ jobs:
           repository: '$(ACR_NAME).azurecr.io/$(IMAGE_NAME)'
           dockerfile: '**/Dockerfile'
           tags: |
-            latest
+             $(Build.BuildId)
+             latest
         displayName: 'Build and Push Docker Image'
+
 
 
