@@ -76,7 +76,8 @@ stages:
                       sudo docker start nginx_container
                     else
                       echo "El contenedor 'nginx_container' no existe. Creándolo y ejecutándolo..."
-                      sudo docker run -d --name nginx_container registrocontenedores.azurecr.io/registrocontenedor-s4:$(Build.BuildId)
+                      sudo docker run -d --name nginx_container \registrocontenedores.azurecr.io/registrocontenedor-s4:$(Build.BuildId)
+
 
                       
                     fi
@@ -90,6 +91,7 @@ stages:
                     echo "La URL para acceder a Nginx es: http://${VM_IP_PUBLICA}/"
 
                   displayName: 'Mostrar URL de la máquina virtual'
+
 
 
 
